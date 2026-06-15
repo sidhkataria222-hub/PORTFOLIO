@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidh Kataria | Portfolio</title>
+    <link rel="stylesheet" href="index.css">
+    <script>
+        // Prevent layout theme flashing before DOM is fully loaded
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+</head>
+<body data-page="home">
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Sidh Kataria</a>
+
+            <div class="nav-actions" style="display: flex; align-items: center; gap: 16px;">
+                <ul>
+                    <li><a href="index.html" class="active" data-i18n="nav.home">Home</a></li>
+                    <li><a href="about.html" data-i18n="nav.about">About</a></li>
+                    <li><a href="resume.html" data-i18n="nav.resume">Resume</a></li>
+                    <li><a href="skills.html" data-i18n="nav.skills">Skills</a></li>
+                    <li><a href="projects.html" data-i18n="nav.projects">Projects</a></li>
+                    <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+                </ul>
+
+                <div class="github-col" style="position: relative;">
+                    <input id="github-username" class="github-input" data-i18n-placeholder="github.placeholder" placeholder="GitHub username" style="padding:6px 10px; border-radius:8px; border:1px solid rgba(0,0,0,0.06); margin-right:8px; width:140px;" />
+                    <button id="github-toggle" class="github-btn" aria-label="Open GitHub repos">🐙</button>
+
+                    <div id="github-panel" class="github-panel" aria-hidden="true" style="display:none; position:absolute; right:0; top:44px; width:360px; max-width:calc(100vw - 40px); z-index:1200;">
+                        <div style="display:flex; justify-content:space-between; align-items:center; gap:8px; padding:12px 14px; border-bottom:1px solid var(--card-border); background:var(--card-bg);">
+                            <strong id="github-user-display" data-i18n="github.title">GitHub</strong>
+                            <div style="display:flex; gap:8px; align-items:center;">
+                                <button id="github-refresh" class="btn-outline" style="padding:6px 10px; font-size:0.85rem;" data-i18n="github.refresh">Refresh</button>
+                                <button id="github-close" class="btn-outline" style="padding:6px 10px; font-size:0.85rem;" data-i18n="github.close">Close</button>
+                            </div>
+                        </div>
+                        <div style="max-height:360px; overflow:auto; background:var(--card-bg); border:1px solid var(--card-border); border-top:none; padding:12px;">
+                            <div class="github-section">
+                                <h4 style="margin:8px 0;" data-i18n="github.yourRepos">Your Repos</h4>
+                                <ul id="github-own-list" class="repo-list" style="list-style:none; padding:0; margin:0 0 12px 0;"></ul>
+                            </div>
+                            <div class="github-section">
+                                <h4 style="margin:8px 0;" data-i18n="github.contributed">Contributed</h4>
+                                <ul id="github-contrib-list" class="repo-list" style="list-style:none; padding:0; margin:0 0 12px 0;"></ul>
+                            </div>
+                            <div id="github-error" style="display:none; color:#ef4444; margin-top:6px; font-size:0.9rem;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <select id="language-select" class="lang-select" aria-label="Select language">
+                    <option value="en">English</option>
+                    <option value="hi">हिंदी</option>
+                </select>
+
+                <button class="theme-toggle-btn" aria-label="Toggle theme">🌙</button>
+
+                <button class="menu-toggle" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content reveal">
+            <h1><span data-i18n="home.heroGreeting">Hi, I'm</span> <span>Sidh Kataria</span></h1>
+            <h3 data-i18n="home.heroSubtitle">Frontend Developer & DSA Enthusiast</h3>
+            <p data-i18n="home.heroDescription">
+                B.Tech IT student at GGSIPU. Building modern web applications and solving real-world problems through clean code and efficient algorithms.
+            </p>
+
+            <div class="floating-tech-badges">
+                <span class="tech-badge">💻 React</span>
+                <span class="tech-badge">⚙️ JavaScript</span>
+                <span class="tech-badge">☕ Java</span>
+                <span class="tech-badge">🔗 Web3</span>
+                <span class="tech-badge">📊 DSA</span>
+                <span class="tech-badge">🗄️ SQL</span>
+            </div>
+
+            <div class="buttons">
+                <a href="projects.html" class="btn" data-i18n="home.viewProjects">View Projects 🚀</a>
+                <a href="resume.html" class="btn-outline" data-i18n="home.myResume">My Resume 📄</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p data-i18n="footer.text">© 2026 Sidh Kataria. All Rights Reserved.</p>
+        
+    </footer>
+
+    <script src="index.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Sidh Kataria</title>
+    <link rel="stylesheet" href="index.css">
+    <script>
+        // Prevent layout theme flashing before DOM is fully loaded
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+</head>
+<body data-page="projects">
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Sidh Kataria</a>
+
+            <div style="display: flex; align-items: center; gap: 16px;">
+                <ul>
+                    <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                    <li><a href="about.html" data-i18n="nav.about">About</a></li>
+                    <li><a href="resume.html" data-i18n="nav.resume">Resume</a></li>
+                    <li><a href="skills.html" data-i18n="nav.skills">Skills</a></li>
+                    <li><a href="projects.html" class="active" data-i18n="nav.projects">Projects</a></li>
+                    <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+                </ul>
+
+                <select id="language-select" class="lang-select" aria-label="Select language">
+                    <option value="en">English</option>
+                    <option value="hi">हिंदी</option>
+                </select>
+
+                <button class="theme-toggle-btn" aria-label="Toggle theme">🌙</button>
+
+                <button class="menu-toggle" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <section id="projects" class="section">
+        <h2 class="reveal" data-i18n="projects.heading">My Projects</h2>
+        <p class="section-subtitle reveal" data-i18n="projects.subtitle">A collection of web applications, Web3 prototypes, and backend systems I have developed</p>
+
+        <div class="projects-grid">
+            <!-- HealthX -->
+            <div class="card project-card reveal">
+                <h3 data-i18n="projects.healthxTitle">HealthX</h3>
+                <p data-i18n="projects.healthxDesc">
+                    Built a responsive healthcare dashboard that facilitates secure patient record management, digital doctor appointments, and medical profile tracking. Features an emergency QR-based health access system, enabling first responders to scan a QR code and instantly view critical, user-permitted medical details in emergency situations.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">HTML5</span>
+                    <span class="tech-tag">CSS3</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">QR Integration</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/sidhkataria222-hub/HealthX" target="_blank" rel="noopener noreferrer" class="btn" data-i18n="projects.viewCode">View Code 💻</a>
+                </div>
+            </div>
+
+            <!-- DecentraLance -->
+            <div class="card project-card reveal">
+                <h3 data-i18n="projects.decentraLanceTitle">DecentraLance</h3>
+                <p data-i18n="projects.decentraLanceDesc">
+                    Developed a decentralized freelancing marketplace leveraging Web3 smart contracts. The platform establishes a direct client-to-freelancer collaboration ecosystem without intermediaries. Supports transparent project listings, escrow-based secure milestone payments, and contract enforcement via solidity smart contracts to minimize overhead.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">Web3.js</span>
+                    <span class="tech-tag">Solidity</span>
+                    <span class="tech-tag">Ethereum</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/sidhkataria222-hub/freelance" target="_blank" rel="noopener noreferrer" class="btn" data-i18n="projects.viewCode">View Code 💻</a>
+                </div>
+            </div>
+
+            <!-- Azad Yatri -->
+            <div class="card project-card reveal">
+                <h3 data-i18n="projects.azadYatriTitle">Azad Yatri</h3>
+                <p data-i18n="projects.azadYatriDesc">
+                    Designed a travel booking and discovery web application focused on Indian destinations. Features interactive trip planning tools, rich destination highlight showcases, and a streamlined booking user interface. Created high-fidelity CSS and Bootstrap layouts to improve travel discovery and facilitate seamless itinerary management.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">HTML5</span>
+                    <span class="tech-tag">CSS3</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">Bootstrap</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/sidhkataria222-hub/azad-yatri-" target="_blank" rel="noopener noreferrer" class="btn" data-i18n="projects.viewCode">View Code 💻</a>
+                </div>
+            </div>
+
+            <!-- Railway Management System -->
+            <div class="card project-card reveal">
+                <h3 data-i18n="projects.railwayTitle">Railway Management System</h3>
+                <p data-i18n="projects.railwayDesc">
+                    Engineered a robust terminal/GUI-based railway database management application. Designed relational database schemas to model trains, passengers, bookings, schedules, and fare rates. Implemented transactional queries to handle high-concurrency ticket reservations, ticket cancellations, and schedule adjustments securely.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">Java</span>
+                    <span class="tech-tag">JDBC</span>
+                    <span class="tech-tag">MySQL</span>
+                    <span class="tech-tag">Relational DB</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/sidhkataria222-hub" target="_blank" rel="noopener noreferrer" class="btn" data-i18n="projects.viewCode">View Code 💻</a>
+                </div>
+            </div>
+
+            <!-- Mentorship & NGO Platform -->
+            <div class="card project-card reveal">
+                <h3 data-i18n="projects.mentorshipTitle">Mentorship & NGO Platform</h3>
+                <p data-i18n="projects.mentorshipDesc">
+                    Co-created a mentorship web portal serving underprivileged students and NGOs. Features modules for career guidance, scheduling one-on-one video mentorship sessions, tracking student progress, and raising micro-donations. Structured using component-based React architecture and real-time database syncing.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">React.js</span>
+                    <span class="tech-tag">CSS Modules</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">Realtime DB</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/sidhkataria222-hub" target="_blank" rel="noopener noreferrer" class="btn" data-i18n="projects.viewCode">View Code 💻</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="skills-category reveal" style="margin-top: 40px; padding: 40px;">
+            <h3 style="margin-bottom: 8px;" data-i18n="projects.dsaTitle">Live LeetCode DSA Stats</h3>
+            <p style="color: var(--text-muted); margin-bottom: 24px; font-size: 0.95rem;" data-i18n="projects.dsaDesc">Showcasing problem solving progress on LeetCode</p>
+
+            <div class="leetcode-input-group" style="display: flex; gap: 12px; margin-bottom: 30px; max-width: 450px;">
+                <input type="text" id="leetcode-username" class="form-control" value="sidhkataria222" data-i18n-placeholder="projects.usernamePlaceholder" placeholder="LeetCode Username" style="padding: 10px 16px; border-radius: 8px; font-size: 0.95rem; flex-grow: 1;">
+                <button id="fetch-leetcode-btn" class="btn" style="padding: 10px 20px; font-size: 0.95rem; border-radius: 8px; margin: 0; white-space: nowrap;" data-i18n="projects.fetchStats">Fetch Stats 📊</button>
+            </div>
+
+            <div id="leetcode-loading" style="display: none; text-align: center; padding: 30px 0;">
+                <div class="spinner" style="width: 40px; height: 40px; border: 4px solid rgba(99, 102, 241, 0.1); border-top-color: var(--primary); border-radius: 50%; margin: 0 auto 12px; display: inline-block;"></div>
+                <p style="color: var(--text-muted); font-size: 0.9rem;" data-i18n="projects.loading">Fetching live stats...</p>
+            </div>
+
+            <div id="leetcode-error" style="display: none; text-align: center; padding: 15px 0; color: #ef4444; font-size: 0.9rem;">
+                <p data-i18n="projects.errorMessage">⚠️ Failed to fetch live data. Showing cached progress. Click Fetch to retry.</p>
+            </div>
+
+            <div id="leetcode-stats-display">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; align-items: center;">
+                    <div style="display: flex; flex-direction: column; align-items: center; text-align: center; padding: 10px;">
+                        <div style="position: relative; width: 140px; height: 140px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px;">
+                            <svg style="width: 100%; height: 100%; transform: rotate(-90deg);">
+                                <circle cx="70" cy="70" r="60" style="fill: transparent; stroke: var(--card-border); stroke-width: 10;" />
+                                <circle id="leetcode-progress-ring" cx="70" cy="70" r="60" style="fill: transparent; stroke: var(--primary); stroke-width: 10; stroke-dasharray: 377; stroke-dashoffset: 377; transition: stroke-dashoffset 1s ease-in-out;" />
+                            </svg>
+                            <div style="position: absolute; display: flex; flex-direction: column; align-items: center;">
+                                <span id="leetcode-solved-total" style="font-family: 'Outfit', sans-serif; font-size: 1.8rem; font-weight: 800; line-height: 1.1; color: var(--text-color);">0</span>
+                                <span style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px;" data-i18n="projects.solvedLabel">Solved</span>
+                            </div>
+                        </div>
+                        <div>
+                            <a id="leetcode-profile-link" href="https://leetcode.com/u/sidhkataria222/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
+                                <h4 id="leetcode-user-display" style="font-family: 'Outfit', sans-serif; font-size: 1.25rem; font-weight: 700; margin-bottom: 4px; transition: color 0.3s ease;">@sidhkataria222</h4>
+                            </a>
+                            <p id="leetcode-user-rank" style="color: var(--text-muted); font-size: 0.9rem; font-weight: 500;" data-i18n="projects.rankLoading">Rank: Loading...</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 18px;">
+                        <div>
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 6px; font-size: 0.88rem; font-weight: 600;">
+                                <span style="color: #22c55e;" data-i18n="projects.easyProblems">Easy Problems</span>
+                                <span id="leetcode-solved-easy" style="color: var(--text-color);">0 / 0</span>
+                            </div>
+                            <div style="width: 100%; height: 8px; background-color: var(--card-border); border-radius: 4px; overflow: hidden;">
+                                <div id="leetcode-bar-easy" style="width: 0%; height: 100%; background-color: #22c55e; border-radius: 4px; transition: width 1s ease;"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 6px; font-size: 0.88rem; font-weight: 600;">
+                                <span style="color: #eab308;" data-i18n="projects.mediumProblems">Medium Problems</span>
+                                <span id="leetcode-solved-medium" style="color: var(--text-color);">0 / 0</span>
+                            </div>
+                            <div style="width: 100%; height: 8px; background-color: var(--card-border); border-radius: 4px; overflow: hidden;">
+                                <div id="leetcode-bar-medium" style="width: 0%; height: 100%; background-color: #eab308; border-radius: 4px; transition: width 1s ease;"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 6px; font-size: 0.88rem; font-weight: 600;">
+                                <span style="color: #ef4444;" data-i18n="projects.hardProblems">Hard Problems</span>
+                                <span id="leetcode-solved-hard" style="color: var(--text-color);">0 / 0</span>
+                            </div>
+                            <div style="width: 100%; height: 8px; background-color: var(--card-border); border-radius: 4px; overflow: hidden;">
+                                <div id="leetcode-bar-hard" style="width: 0%; height: 100%; background-color: #ef4444; border-radius: 4px; transition: width 1s ease;"></div>
+                            </div>
+                        </div>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 8px; padding-top: 15px; border-top: 1px solid var(--card-border);">
+                            <div>
+                                <span style="display: block; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 2px;" data-i18n="projects.acceptanceRate">Acceptance Rate</span>
+                                <span id="leetcode-acceptance" style="font-family: 'Outfit', sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--text-color);">0%</span>
+                            </div>
+                            <div>
+                                <span style="display: block; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 2px;" data-i18n="projects.totalSubmissions">Total Submissions</span>
+                                <span id="leetcode-submissions" style="font-family: 'Outfit', sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--text-color);">0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <footer>
+        <p data-i18n="footer.text">© 2026 Sidh Kataria. All Rights Reserved.</p>
+        
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>

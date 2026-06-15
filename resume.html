@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | Sidh Kataria</title>
+    <link rel="stylesheet" href="index.css">
+    <script>
+        // Prevent layout theme flashing before DOM is fully loaded
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+</head>
+<body data-page="resume">
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Sidh Kataria</a>
+
+            <div style="display: flex; align-items: center; gap: 16px;">
+                <ul>
+                    <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                    <li><a href="about.html" data-i18n="nav.about">About</a></li>
+                    <li><a href="resume.html" class="active" data-i18n="nav.resume">Resume</a></li>
+                    <li><a href="skills.html" data-i18n="nav.skills">Skills</a></li>
+                    <li><a href="projects.html" data-i18n="nav.projects">Projects</a></li>
+                    <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+                </ul>
+
+                <select id="language-select" class="lang-select" aria-label="Select language">
+                    <option value="en">English</option>
+                    <option value="hi">हिंदी</option>
+                </select>
+
+                <button class="theme-toggle-btn" aria-label="Toggle theme">🌙</button>
+
+                <button class="menu-toggle" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <section id="resume" class="section">
+        <h2 class="reveal" data-i18n="resume.heading">My Resume</h2>
+        <p class="section-subtitle reveal" data-i18n="resume.subtitle">A summary of my education, experience, achievements, and leadership roles</p>
+
+        <div class="resume-actions reveal" style="margin-bottom:18px; display:flex; justify-content:center; gap:12px;">
+            <button id="download-resume" class="btn" aria-label="Download Resume" data-i18n="resume.download">Download Resume ⬇️</button>
+            <a href="resume.pdf" class="btn-outline" download target="_blank" rel="noopener noreferrer" data-i18n="resume.openPdf">Open PDF</a>
+        </div>
+
+        <div class="card reveal" style="margin-bottom: 40px;">
+            <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.5rem; margin-bottom: 12px; color: var(--primary);" data-i18n="resume.objectiveTitle">Objective</h3>
+            <p style="color: var(--text-muted); line-height: 1.7; font-size: 1.05rem;" data-i18n="resume.objectiveText">
+                Motivated B.Tech Information Technology student with strong foundations in Data Structures & Algorithms and Frontend Development. Passionate about building impactful solutions in healthcare and social domains, leveraging leadership experience and rapid prototyping skills honed in hackathons.
+            </p>
+        </div>
+
+        <div class="resume-layout">
+            <!-- Left Column: Education & Experience -->
+            <div class="resume-column reveal">
+                <h3 class="resume-column-title" data-i18n="resume.educationHeading">Education & Experience</h3>
+                
+                <div class="timeline">
+                    <!-- Education -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2024 - Present</div>
+                        <h4 class="timeline-title" data-i18n="resume.educationDegree">B.Tech in Information Technology</h4>
+                        <div class="timeline-subtitle" data-i18n="resume.educationSubtitle">GGSIPU — 2nd Year Student</div>
+                        <div class="timeline-desc" data-i18n="resume.educationDesc">
+                            Focused on Data Structures, Object-Oriented Programming (Java), and Relational Database Systems. Maintaining strong academic standing while building hands-on development skills.
+                        </div>
+                    </div>
+
+                    <!-- Experience -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2025</div>
+                        <h4 class="timeline-title" data-i18n="resume.internshipTitle">Web3 Developer Intern</h4>
+                        <div class="timeline-subtitle" data-i18n="resume.internshipSubtitle">Tezos India</div>
+                        <div class="timeline-desc" data-i18n="resume.internshipDesc">
+                            Gained hands-on experience in decentralized technologies. Collaborated on developing Web3 interfaces, writing smart contracts, and implementing frontend-blockchain integrations.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Achievements & Leadership -->
+            <div class="resume-column reveal">
+                <h3 class="resume-column-title" data-i18n="resume.achievementHeading">Achievements & Leadership</h3>
+                
+                <div class="timeline">
+                    <!-- Achievement -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2025</div>
+                        <h4 class="timeline-title" data-i18n="resume.hackathonTitle">Hackathon Runner-up</h4>
+                        <div class="timeline-subtitle" data-i18n="resume.hackathonSubtitle">Delhi University Hackathon</div>
+                        <div class="timeline-desc" data-i18n="resume.hackathonDesc">
+                            Built an emergency response healthcare dashboard prototype in under 36 hours. Designed the patient access flow and emergency QR codes under intense deadlines, securing 2nd place.
+                        </div>
+                    </div>
+
+                    <!-- Leadership 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2024 - 2025</div>
+                        <h4 class="timeline-title" data-i18n="resume.marketingTitle">PR & Marketing Head</h4>
+                        <div class="timeline-subtitle" data-i18n="resume.marketingSubtitle">Discussion Masters</div>
+                        <div class="timeline-desc" data-i18n="resume.marketingDesc">
+                            Managed outreach campaigns, public relations, and promotional strategies for debates and events. Directed visual branding and successfully increased event participation by 30%.
+                        </div>
+                    </div>
+
+                    <!-- Leadership 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2024 - 2025</div>
+                        <h4 class="timeline-title" data-i18n="resume.activeMemberTitle">Active Member</h4>
+                        <div class="timeline-subtitle" data-i18n="resume.activeMemberSubtitle">E-Cell & AML Department</div>
+                        <div class="timeline-desc" data-i18n="resume.activeMemberDesc">
+                            Organized entrepreneurship workshops and machine learning seminars. Supported peer mentorship programs and helped coordinate inter-college tech fests.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Strengths Section -->
+        <div class="card reveal" style="margin-top: 40px;">
+            <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.4rem; margin-bottom: 20px; color: var(--primary); text-align: center;" data-i18n="resume.coreStrengths">Core Strengths</h3>
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px;">
+                <span class="tech-badge" style="font-size: 1rem; padding: 10px 20px;" data-i18n="resume.strengthCommunication">🗣️ Communication</span>
+                <span class="tech-badge" style="font-size: 1rem; padding: 10px 20px;" data-i18n="resume.strengthLeadership">👥 Team Leadership</span>
+                <span class="tech-badge" style="font-size: 1rem; padding: 10px 20px;" data-i18n="resume.strengthLearner">🚀 Quick Learner</span>
+                <span class="tech-badge" style="font-size: 1rem; padding: 10px 20px;" data-i18n="resume.strengthProblemSolving">🧠 Problem Solving</span>
+                <span class="tech-badge" style="font-size: 1rem; padding: 10px 20px;" data-i18n="resume.strengthTimeManagement">⏰ Time Management</span>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p data-i18n="footer.text">© 2026 Sidh Kataria. All Rights Reserved.</p>
+        
+    </footer>
+
+    <div id="toast" class="toast" aria-live="polite" aria-atomic="true"></div>
+    <script src="index.js"></script>
+</body>
+</html>
